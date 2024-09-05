@@ -1,0 +1,118 @@
+:root {
+    --background: #2a2c2d;
+    --text: #e6e6e6;
+    --primary: #ffb86c;
+    --secondary: #585b65;
+}
+
+body {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 18px;
+    margin-right: 18px;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.fira-code {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.title {
+    text-align: center;
+    color: var(--primary);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 52rem;
+    margin: auto;
+}
+
+.form-container {
+    margin-right: 21px;
+}
+
+.form-input {
+    width: 100%;
+    background-color: var(--background);
+    border: 1px solid var(--secondary);
+    padding: 10px;
+    font-size: larger;
+    color: var(--text);
+    margin-top: 18px;
+    border-radius: 5px;
+}
+
+.form-input::placeholder{
+    color: var(--secondary);
+}
+
+.form-input:focus {
+    outline: none;
+    border: 1px solid var(--primary);
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    font-size: larger;
+    font-weight: 600;
+    border: none;
+    margin-top: 18px;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.snippet-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.snippet-url {
+    text-decoration: none;
+    background-color: var(--primary);
+    border-radius: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: #121214;
+    font-weight: 600;
+}
+
+.snippet-container {
+    /* background-color: #282c34; */
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary);
+    overflow: hidden;
+    margin-bottom: 45px;
+}
+
+.snippet-options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.snippet-options button {
+    font-weight: 600;
+}
+
+.content {
+    font-size: large;
+    margin: 0;
+}

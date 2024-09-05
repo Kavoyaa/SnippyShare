@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+    {% if title %}
+        <title>{{ title }} - Lexicontain</title>
+    {% else %}
+        <title>Lexicontain</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='javascript/success.js') }}"></script>
+{% endblock head%}
+
+
+{% block body %}
+<div>
+    <h2>Your snippet has been created! You can view it by clicking the link below.</h2>
+    <p>Snippet ID: {{ id }}</p>
+    <div class="snippet-actions">
+        <a href="{{ url_for('snippets', n=id) }}" class="snippet-url" id="copy-text">View snippet <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
+        <button id="copy-btn"><i class="fa-regular fa-clipboard fa-lg"></i></button>
+    </div>
+
+</div>
+
+
+{% endblock body%}

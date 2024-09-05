@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+    {% if title %}
+        <title>{{ title }} - SnippyShare</title>
+    {% else %}
+        <title>SnippyShare</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock head%}
+
+
+{% block body %}
+<form method="POST" class="form-container">
+    {{ form.hidden_tag() }}
+    
+    <!-- {{ form.title.label(class="form-control-label") }} -->
+    {{ form.title(placeholder="Snippet title", class="form-input fira-code") }}
+        
+    <!-- {{ form.content.label(class="form-control-label") }} -->
+    {{ form.content(placeholder="Snippet content", class="form-input fira-code", rows=15) }}
+
+    {{ form.submit(class="submit-btn fira-code") }}
+
+</form>
+
+{% endblock body%}

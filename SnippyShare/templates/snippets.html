@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+    {% if title %}
+        <title>{{ title }} - SnippyShare</title>
+    {% else %}
+        <title>SnippyShare</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- hightlightjs -->
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/panda-syntax-dark.min.css"/>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+{% endblock head %}
+
+
+{% block body %}
+    <h2>{{ title }}</h2>
+    <div class="snippet-container">
+        <div class="snippet-options">
+            <!-- <button id="copy-btn" onclick="copyContent()">Copy</button> -->
+            <a href="{{ url_for('raw', n=id) }}">
+                <button style="cursor: pointer;">View Raw</button>
+            </a>
+        </div>
+        <pre class="content"><code id="copy-text">{{ content }}</code></pre>
+    </div>
+    
+{% endblock body %}
+
+
