@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% if title %}
+    <title>{{ title }} - SnippyShare</title>
+  {% else %}
+    <title>SnippyShare</title>
+  {% endif %}
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
   </style>

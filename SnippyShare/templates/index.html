@@ -2,11 +2,6 @@
 
 
 {% block head %}
-    {% if title %}
-        <title>{{ title }} - SnippyShare</title>
-    {% else %}
-        <title>SnippyShare</title>
-    {% endif %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 {% endblock head%}
 

@@ -2,11 +2,6 @@
 
 
 {% block head %}
-    {% if title %}
-        <title>{{ title }} - Lexicontain</title>
-    {% else %}
-        <title>Lexicontain</title>
-    {% endif %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script defer src="{{ url_for('static', filename='javascript/success.js') }}"></script>
 {% endblock head%}
