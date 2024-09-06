@@ -2,3 +2,4 @@ flask
 flask-WTF
 flask-SQLAlchemy
 psycopg2-binary
+python-dotenv
