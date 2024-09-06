@@ -20,12 +20,19 @@ git clone https://github.com/Kavoyaa/SnippyShare.git
 cd SnippyShare
 ```
 
+### Setting up `.env` file
+Create a file named `.env` and put the data in it in the following format:
+```
+SECRET_KEY=your_secret_key
+DATABASE_URL=database_url
+```
+
 ### Installing required packages
 ```bash
 pip install -r requirements.txt
 ```
 
-### Setting up database using Python prompt
+### Creating table(s) in database using Python prompt
 ```bash
 python3
 >>> from SnippyShare import app, db
@@ -39,3 +46,4 @@ python3
 ```bash
 flask run
 ```
+The application should start running in `http://localhost:5000`.
