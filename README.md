@@ -1,23 +1,31 @@
 # SnippyShare
-A simple website to share snippets of code.
+A simple website to share snippets of code *(work in progress)*.
 
 ![Website preview](/image.png?raw=true "Screenshot")
 
 ## Features
+-Generating URL to store code snippets<br>
 -Syntax highlighting<br>
-*and uh yeah thats it*
+*expect more features soon!*
 
 ## Running locally
+
 ### Cloning the repo
 ```bash
 git clone https://github.com/Kavoyaa/SnippyShare.git
 ```
 
-### Setting up database using Python prompt
+### Changing directory
 ```bash
 cd SnippyShare
 ```
 
+### Installing required packages
+```bash
+pip install -r requirements.txt
+```
+
+### Setting up database using Python prompt
 ```bash
 python3
 >>> from SnippyShare import app, db
