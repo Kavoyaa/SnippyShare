@@ -1,3 +1,4 @@
-Flask
-Flask-WTF
-Flask-SQLAlchemy
+flask
+flask-WTF
+flask-SQLAlchemy
+psycopg2-binary
