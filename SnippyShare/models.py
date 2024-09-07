@@ -1,7 +1,7 @@
 from SnippyShare import db
 
 class Snippets(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.String(), primary_key=True)
     name = db.Column(db.String(), nullable=False)
     content = db.Column(db.String(), nullable=False)
 
