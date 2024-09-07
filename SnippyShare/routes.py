@@ -9,19 +9,17 @@ def index():
     form = ContentForm()
     if form.validate_on_submit():   
         id = str(uuid.uuid4())
-        s = Snippets(id=id, name=form.title.data, content=form.content.data)
-        db.session.add(s)
+        snippet = Snippets(id=id, name=form.title.data, content=form.content.data)
+        db.session.add(snippet)
         db.session.commit()
 
-        snippet = Snippets.query.filter_by(name=form.title.data, content=form.content.data).all()[-1]
-
-        return render_template("success.html", title="Success", id=snippet.id)
+        return render_template("success.html", title="Success", id=id)
     else:
         return render_template("index.html", form=form)
 
 @app.route("/snippets/<n>")
 def snippets(n):
-    snippet =  Snippets.query.filter_by(id=n).first()
+    snippet =  db.one_or_404(db.select(Snippets).filter_by(id=n))
     content = snippet.content
     return render_template("snippets.html", title=snippet.name, content=content, id=n)
 
@@ -30,4 +28,3 @@ def raw(n):
     snippet =  Snippets.query.filter_by(id=n).first()
     content = snippet.content.replace("<", "&lt;").replace(">", "&gt;")
     return f"<pre>{content}</pre>"
-
