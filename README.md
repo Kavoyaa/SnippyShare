@@ -26,6 +26,7 @@ Create a file named `.env` and put the data in it in the following format:
 SECRET_KEY=your_secret_key
 DATABASE_URL=database_url
 ```
+For testing purposes, you can try putting `DATABASE_URL=sqlite:///site.db`. The database will be stored at instance/site.db in later steps.
 
 ### Installing required packages
 ```bash
